@@ -1,0 +1,17 @@
+<div *ngIf="news && news.length > 0">
+    <div class="container">
+        <div class="card" style="width:700px" *ngFor="let item of news">
+            <a href={{item.url}} target="_blank">
+                <img class="card-img-top" src={{item.urlToImage}} alt="Card image">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">{{item.title}}</h4>
+                <p class="card-text">{{item.description}}</p>
+                <!-- <a href="#" class="btn btn-primary"></a> -->
+                <p>content: {{item.content}}</p>
+                <a href={{item.url}} class="btn btn-primary" target="_blank">View full story</a>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
