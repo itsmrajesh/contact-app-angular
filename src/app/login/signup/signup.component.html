@@ -1,0 +1,22 @@
+<div class="col-md-5">
+    <div class="col-md-5">
+        <h1 class="text-danger">Sign up form</h1>
+        <form action="">
+            <label for="email">Email: </label>
+            <input type="text" name="email" [(ngModel)]="email" id="email">
+            <label for="pwd">Password: </label>
+            <input type="password" name="pwd" id="pwd" [(ngModel)]="password"> <br> <br>
+            <button class="btn btn-warning" (click)="showPwd()">Show
+                Password</button> <br> <br>
+            <button class="btn btn-info">Signup</button>
+            <p *ngIf="showPwd()">{{password}}</p>
+
+        </form>
+    </div>
+    <div class="col-md-7">
+        <div *ngIf="email.length>2 && password.length>2">
+            <h1>Your email : {{email}}</h1>
+            <h1>Your pwd : {{password}}</h1>
+        </div>
+    </div>
+</div>
